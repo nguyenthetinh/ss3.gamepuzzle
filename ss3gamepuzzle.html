@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle</title>
+</head>
+<style>
+    img {
+        display: block;
+        margin: 1em;
+        width: 400px;
+    }
+</style>
+<body>
+<div class="ctn">
+    <img style="position: absolute;top: 0px; left: 500px" src="g1.jpg" id="g1" alt="" onclick="swapimg1();"/>
+    <img style="position: absolute; top: 120px;left: 500px" src="g2.jpg" id="g2" alt="" onclick="swapimg2();"/>
+    <img style="position: absolute; top: 240px;left: 500px" src="g3.jpg" id="g3" alt="" onclick="swapimg3();"/>
+    <img style="position: absolute; top: 360px;left: 500px" src="g4.jpg" id="g4" alt="" onclick="swapimg4();"/>
+    <img style="position: absolute; top: 480px;left: 500px" src="g5.jpg" id="g5" alt="" onclick="swapimg5();"/>
+</div>
+<script>
+    let img1 = document.getElementById("g1");
+    let img2 = document.getElementById("g2");
+    let img3 = document.getElementById("g3");
+    let img4 = document.getElementById("g4");
+    let img5 = document.getElementById("g5");
+    let image1 = "g1";
+    let image2 = "g2";
+    let image3 = "g3";
+    let image4 = "g4";
+    let image5 = "g5";
+    function swapimg1() {
+        if (image1 === "g1") {
+            image1 = "m1";
+        } else if (image1 === "m1") {
+            image1 = "k1";
+        } else if (image1 === "k1") {
+            image1 = "g1";
+        } img1.src = image1 + ".jpg";
+    }
+    function swapimg2() {
+        if (image2 === "g2") {
+            image2 = "m2";
+        } else if (image2 === "m2") {
+            image2 = "k2";
+        } else if (image2 === "k2") {
+            image2 = "g2";
+        } img2.src = image2 + ".jpg";
+    }
+    function swapimg3() {
+        if (image3 === "g3") {
+            image3 = "m3";
+        } else if (image3 === "m3") {
+            image3 = "k3";
+        } else if (image3 === "k3") {
+            image3 = "g3";
+        } img3.src = image3 + ".jpg";
+    }
+    function swapimg4() {
+        if (image4 === "g4") {
+            image4 = "m4";
+        } else if (image4 === "m4") {
+            image4 = "k4";
+        } else if (image4 === "k4") {
+            image4 = "g4";
+        } img4.src = image4 + ".jpg";
+    }
+    function swapimg5() {
+        if (image5 === "g5") {
+            image5 = "m5";
+        } else if (image5 === "m5") {
+            image5 = "k5";
+        } else if (image5 === "k5") {
+            image5 = "g5";
+        }
+        img5.src = image5 + ".jpg";
+        if (image1 === "g1" && image2 === "g2" && image3 === "g3" && image4 === "g4" && image5 === "g5") {
+            alert("con gau");
+        } else if (image1 === "m1" && image2 === "m2" && image3 === "m3" && image4 === "m4" && image5 === "m5") {
+            alert("con meo");
+        } else if (image1 === "k1" && image2 === "k2" && image3 === "k3" && image4 === "k4" && image5 === "k5") {
+            alert("con khi");
+        } else {
+            alert ("chua dung!");
+        }
+    }
+</script>
+</body>
+</html>
